@@ -32,19 +32,25 @@ public:
         }
         return r;
     }
-
+     
     void inorderTraversal(node* r) {
+    int count=0;  
         if (r == nullptr) {
             return ;
         }else {
             inorderTraversal(r->left);
             order[i++]=r->data;
             cout<<r->data<<" ";
+            count++;
             inorderTraversal(r->right);
         }
     }
     void smallest_kth(int k) {
-        cout <<"yes"<<order[k-1];
+        if(k<0 || k> count){
+            cout <<"Out of rangee";
+        }else{
+        cout <<<<order[k-1];
+        }
     }
 };
 
